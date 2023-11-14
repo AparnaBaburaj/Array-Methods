@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Array Methods</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+   
+  </style>
+</head>
+<body>
+    <div class="bx-navbar">
+        <a href="">HOME</a>
+        <a href="">LOGOUT</a>
+    </div>
+
+    <div class="bx-section1">
+        <div class="bx-section1--part1">
+            <div class="bx-section1__fhalf">
+                <h2 class="bx-section1__heading1">Add Student Details</h2>
+    
+                
+       
+<form id="studentForm">
+
+  <input type="text" id="name" name="name" placeholder="Name" required><br>
+
+  
+  <input type="number" id="age" name="age" placeholder="Age" required><br>
+
+  <input type="text" id="department" name="department" placeholder="Department" required><br>
+
+  <input type="number" id="totalMarks" name="totalMarks" placeholder="Total Marks" required><br>
+
+  <button type="button" class="bx-button" onclick="addStudent()">Add Student</button>
+
+  
+</form>
+</div>
+<div class="bx-section1__shalf ">
+    <div style="align-items: end;text-align: end;justify-content: end;display: flex;flex-direction: row;">
+    <label for="sortField">Sort by:</label>
+  <select id="sortField" onchange="SortData()" style="width: 200px;height: 28px;margin-left: 10px;">
+    <option value="name">Name</option>
+    <option value="age">Age</option>
+    <option value="department">Department</option>
+    <option value="totalMarks">Total Marks</option>
+  </select>
+  <label for="search" style="margin-left: 10px;">Search:</label>
+  <input type="text" id="search" oninput="FilterData()" style="width: 200px;margin-left: 10px;">
+  <input type="number" id="filterMark" placeholder="Enter Mark to filter" style="width: 200px;margin-left: 10px;">
+<button type="button" onclick="FilterMarks()">Filter</button>
+</div>
+<div id="tableContainer"></div>
+
+
+
+
+</div>
+</div>
+
+<script src="js/main.js"></script>
+
+</body>
+</html>
